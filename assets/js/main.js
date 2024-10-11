@@ -6,5 +6,6 @@ window.addEventListener('DOMContentLoaded', () => {
   taskManager.add('Task 2');
   taskManager.add('Task 3');
   taskManager.add('Task 4');
+  taskManager.insertTask() 
   taskManager.render();
 });

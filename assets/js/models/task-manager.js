@@ -40,6 +40,20 @@ class TaskManager {
     return taskNode;
   }
 
+  insertTask() {
+    const inputTask = document.getElementById('input');
+    inputTask.classList.add('form-control');
+    inputTask.setAttribute('type', 'text');
+
+    inputTask.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter'&& inputTask.value !== '') {
+        this.add(inputTask.value);
+        inputTask.value = '';
+        this.render();
+
+      }
+    });
+  }
   render() {
     const container = document.getElementById(this.containerId);
     container.innerHTML = '';
